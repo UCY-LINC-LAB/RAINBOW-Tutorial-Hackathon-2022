@@ -1,0 +1,60 @@
+version: "3.2"
+
+services:
+
+# Application
+  car-one:
+    environment:
+      TARGET_EDGE: edge-one
+      IOT_DATA_SIZE: 1
+      IOT_DATA_GENERATION_PERIODICITY: 5
+    image: workload-exp:0.0.1
+    volumes:
+      - /home/ubuntu/data:/data
+    networks:
+      - internet
+
+  car-two:
+    environment:
+      TARGET_EDGE: edge-two
+      IOT_DATA_SIZE: 1
+      IOT_DATA_GENERATION_PERIODICITY: 5
+    image: workload-exp:0.0.1
+    volumes:
+      - /home/ubuntu/data:/data
+    networks:
+      - internet
+
+  edge-one:
+    image: edge-exp:0.0.1
+    # environment:
+    #   RAINBOW_AGENT_HOST: <host-ip>
+    networks:
+      - internet
+
+  edge-two:
+    image: edge-exp:0.0.1
+    # environment:
+    #   RAINBOW_AGENT_HOST: <host-ip>
+    networks:
+      - internet
+
+  cloud:
+    environment:
+      EDGE_SERVERS: edge-one,edge-two
+      COMPUTE_PERIODICITY: 15
+    image: cloud-exp:0.0.1
+    ports:
+      - 8080:8000
+    networks:
+      - internet
+
+networks:
+  internet:
+
+
+# volumes:
+#   netdatalib:
+#   netdatacache:
+#   rainbow-metrics:
+#   netdataconfig:
