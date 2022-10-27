@@ -1,0 +1,16 @@
+version: "3.2"
+
+services:
+
+# Application
+  workload:
+    # TODO ADD WORKLOAD EXECUTION
+
+  edge:
+    # TODO ADD EDGE SERVER
+
+  cloud:
+    # TODO ADD CLOUD SERVER
+
+networks:
+    # TODO ADD NETWORKS
