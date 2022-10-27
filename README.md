@@ -1,5 +1,5 @@
 # RAINBOW-Tutorial-Hackathon-2022
-## IoT/Docker tutorial and RAINBOW Hackathon
+## IoT/Docker Tutorial and RAINBOW Hackathon
 
 The Internet of Things (IoT) is a fast-growing technology where smart devices, such as environmental sensors, medical monitors, 
 smart house gadgets, and industrial sensors, interact with the environment, building cyber-physical applications. 
@@ -8,7 +8,9 @@ Docker is an open platform for container-based virtualization and offers the mos
 Specifically, docker containers are a lightweight virtualization solution that developers can use to quickly design, test, deploy, and update applications. 
 The ability of docker containers to run almost anywhere, even on IoT devices, makes the combination of containers and IoT devices a common practice in the industrial IoT applications.
 
-![Features](assets/images/features.png)
+<p align="center">
+    <img width="400" src="assets/images/features.png" alt="Features">
+</p>
 
 
 ## Description
@@ -27,5 +29,6 @@ and performing a simple task on it (e.g., extraction of custom metrics or a scal
 
 ## Organizers
 
-
-![organizers](assets/images/organizers.png)
+<p align="center">
+    <img width="500" src="assets/images/organizers.png" alt="Organizers">
+</p>
