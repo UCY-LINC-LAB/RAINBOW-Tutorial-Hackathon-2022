@@ -10,7 +10,7 @@ services:
       IOT_DATA_GENERATION_PERIODICITY: 5
     image: workload-exp:0.0.1
     volumes:
-      - /home/ubuntu/data:/data
+      - ./data:/data
     networks:
       - internet
 
@@ -21,7 +21,7 @@ services:
       IOT_DATA_GENERATION_PERIODICITY: 5
     image: workload-exp:0.0.1
     volumes:
-      - /home/ubuntu/data:/data
+      - ./data:/data
     networks:
       - internet
 
