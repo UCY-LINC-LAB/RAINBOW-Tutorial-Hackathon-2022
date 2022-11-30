@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  camera:
+     image: camera:latest
+     build: .
+     volumes:
+        - /run/udev:/run/udev
+        - ./:/app # remove this volume if you don't want to retrieve the captured images
+     privileged: true
+     environment:
+        CAMERA_ON: "false"
+        SERVER_IP: "10.16.21.198"
+     devices:
+        - "/dev/vchiq:/dev/vchiq"

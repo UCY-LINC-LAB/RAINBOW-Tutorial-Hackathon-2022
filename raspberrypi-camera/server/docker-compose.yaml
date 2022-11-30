@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  server:
+    image: tflite-server:0.0.1
+    build: .
+    ports:
+      - 5000:5000
